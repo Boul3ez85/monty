@@ -1,0 +1,49 @@
+#include "monty.h"
+
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+
+void push(stack_t **stack, unsigned int line_number)
+{
+	stack_t *new;
+
+	(void)line_number;
+	new = malloc(sizeof(stack_t));
+	if (new == NULL)
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		exit(EXIT_FAILURE);
+	}
+	new->next = *stack;
+	new->prev = NULL;
+	new->n = stack_value;
+	if (*stack)
+		(*stack)->prev = new;
+	*stack = new;
+}
+
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ */
+
+void pall(stack_t **stack, unsigned int line_number)
+{
+	stack_t *temp;
+
+	(void)line_number;
+	temp = *stack;
+	while (temp)
+	{
+		printf("%d\n", temp->n);
+		temp = temp->next;
+	}
+}
