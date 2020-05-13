@@ -48,6 +48,9 @@ int main(int argc, char **argv)
 		get_instructions(tokens, &stack, line_number);
 		line_number++;
 	}
+	free(tokens);
+	free(token);
+	free(buffer);
 	fclose(fd);
 	return (0);
 }

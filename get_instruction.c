@@ -20,7 +20,7 @@ void get_instructions(char **tokens, stack_t **stack, unsigned int line_number)
 
 	if (atoi(tokens[1]) != 0)
 		stack_value = atoi(tokens[1]);
-	if ((strcmp(tokens[0], "push") == 0) && isdigit(stack_value) == 0)
+	if ((strcmp(tokens[0], "push") == 0) && isdigit(stack_value) != 0)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
