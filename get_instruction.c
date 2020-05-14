@@ -12,6 +12,7 @@
 void get_instructions(char **tokens, stack_t **stack, unsigned int line_number)
 {
 	int i = 0;
+	char *check = tokens[1];
 	instruction_t op_codes[] = {
 		{"push", push},
 		{"pall", pall},
@@ -19,14 +20,19 @@ void get_instructions(char **tokens, stack_t **stack, unsigned int line_number)
 		{"pop", pop},
 		{NULL, NULL}
 	};
-	if (isdigit((*tokens)[1]) == 0 && tokens[1])
-		stack_value = atoi(tokens[1]);
-	if ((strcmp(tokens[0], "push") == 0 && isdigit((*tokens)[1]) != 0) || !tokens[1])
+	if (tokens[1] == NULL)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		free(tokens);
 		exit(EXIT_FAILURE);
 	}
+	if (strcmp(tokens[0], "push") == 0 && isdigit(*check) == 0)
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+		free(tokens);
+		exit(EXIT_FAILURE);
+	}
+	stack_value = atoi(tokens[1]);
 	while (op_codes[i].opcode != NULL)
 	{
 		if (strcmp(op_codes[i].opcode, tokens[0]) == 0)
