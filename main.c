@@ -1,4 +1,5 @@
 #include "monty.h"
+int stack_value;
 
 /**
  * main - main function
@@ -8,7 +9,6 @@
  * Return: 0 on success, error on failure
  */
 
-int stack_value;
 int main(int argc, char **argv)
 {
 	FILE *fd;
