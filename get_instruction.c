@@ -19,9 +19,9 @@ void get_instructions(char **tokens, stack_t **stack, unsigned int line_number)
 		{"pop", pop},
 		{NULL, NULL}
 	};
-	if (tokens[1])
+	if (isdigit((*tokens)[1]) == 0 && tokens[1])
 		stack_value = atoi(tokens[1]);
-	if ((strcmp(tokens[0], "push") == 0) && stack_value == 0)
+	if ((strcmp(tokens[0], "push") == 0 && isdigit((*tokens)[1]) != 0) || !tokens[1])
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		free(tokens);
