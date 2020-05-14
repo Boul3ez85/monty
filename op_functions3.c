@@ -80,7 +80,7 @@ void pstr(stack_t **stack, unsigned int line_number)
 	temp = *stack;
 	while (stack_len(*stack) != 0)
 	{
-		if (isalpha(temp->n) == 0 || temp->n == 0)
+		if (isalpha(temp->n) == 0)
 			break;
 		c = temp->n;
 		printf("%c", c);
