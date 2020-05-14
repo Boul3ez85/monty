@@ -29,7 +29,7 @@ char **tokenizer(char *str)
 		i++;
 		token = strtok(NULL, del);
 	}
-	if (token == NULL && *tokens == NULL)
+	if ((token == NULL && *tokens == NULL) || *tokens[0] == '#')
 	{
 		free(tokens);
 		free(token);
