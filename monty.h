@@ -40,7 +40,8 @@ typedef struct instruction_s
 } instruction_t;
 
 /* Functions Prototypes */
-void get_instructions(char **, stack_t **, unsigned int);
+void get_instructions(char **tokens, char *buffer,
+stack_t **stack, unsigned int line_number, FILE *fd);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 char **tokenizer(char *str);
