@@ -83,3 +83,27 @@ void pop(stack_t **stack, unsigned int line_number)
 	}
 	delete_dnodeint_at_index(stack, 0);
 }
+
+/**
+ * swap - swap the top two elements
+ * @stack: head node
+ * @line_number: line nmbr
+ *
+ * Return: Void
+ */
+
+void swap(stack_t **stack, unsigned int line_number)
+{
+	stack_t *first_instack , *second_instack;
+	int data;
+	if (stack_len(*stack) < 2 || *stack == NULL)
+	{
+		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	first_instack = *stack;
+	second_instack = first_instack->next;
+	data = first_instack->n;
+	first_instack->n = second_instack->n;
+	second_instack->n = data;
+}
