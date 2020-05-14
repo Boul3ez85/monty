@@ -12,7 +12,7 @@ int stack_value;
 int main(int argc, char **argv)
 {
 	FILE *fd;
-	char *buffer;
+	char *buffer = NULL;
 	char **tokens;
 	size_t size = 0;
 	stack_t *stack = NULL;

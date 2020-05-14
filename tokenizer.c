@@ -15,7 +15,7 @@ char **tokenizer(char *str)
 	char  **tokens;
 	char *del = " \n";
 
-	tokens = malloc(sizeof(char *) * 2);
+	tokens = malloc(sizeof(char *) * 3);
 	if (tokens == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
@@ -35,6 +35,7 @@ char **tokenizer(char *str)
 		free(token);
 		return (NULL);
 	}
+	tokens[i] = NULL;
 	return (tokens);
 }
 
