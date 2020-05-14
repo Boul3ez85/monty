@@ -9,7 +9,7 @@
  * Return: Void
  */
 
-void get_instructions(char **tokens, stack_t **stack, char* buffer, unsigned int line_number)
+void get_instructions(char **tokens, stack_t **stack, unsigned int line_number)
 {
 	int i = 0;
 	char *check = tokens[1];
@@ -26,7 +26,6 @@ void get_instructions(char **tokens, stack_t **stack, char* buffer, unsigned int
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line_number);
 			free(tokens);
-			free(buffer);
 			free_stack(*stack);
 			exit(EXIT_FAILURE);
 		}
