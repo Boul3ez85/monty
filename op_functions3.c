@@ -45,12 +45,6 @@ void pchar(stack_t **stack, unsigned int line_number)
 	char c;
 
 	temp = *stack;
-	if (isalpha(temp->n) == 0)
-	{
-		fprintf(stderr, "L%d: can't pchar, value out of range", line_number);
-		free_stack(*stack);
-		exit(EXIT_FAILURE);
-	}
 	if (*stack == NULL)
 	{
 		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
@@ -58,5 +52,11 @@ void pchar(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	c = temp->n;
+	if (isalpha(temp->n) == 0)
+	{
+		fprintf(stderr, "L%d: can't pchar, value out of range", line_number);
+		free_stack(*stack);
+		exit(EXIT_FAILURE);
+	}
 	printf("%c\n", c);
 }
