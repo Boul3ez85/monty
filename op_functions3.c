@@ -60,3 +60,29 @@ void pchar(stack_t **stack, unsigned int line_number)
 	}
 	printf("%c\n", c);
 }
+
+/**
+ * pstr - prints string starting from top of the stack
+ * @stack: head node
+ * @line_number: line nmbr
+ *
+ * Return: Void
+ */
+
+void pstr(stack_t **stack, unsigned int line_number)
+{
+	stack_t *temp;
+	char c;
+
+	(void)line_number;
+	temp = *stack;
+	while (stack_len(*stack) != 0)
+	{
+		if (isalpha(temp->n) == 0)
+			break;
+		c = temp->n;
+		printf("%c", c);
+		temp = temp->next;
+	}
+	printf("\n");
+}
