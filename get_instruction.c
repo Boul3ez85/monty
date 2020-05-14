@@ -4,7 +4,9 @@
  * get_instructions - function to call the function to the instruction
  * @tokens: array of tokens
  * @stack: head of the stack
+ * @buffer: buffer
  * @line_number: line number
+ * @fd: file
  *
  * Return: Void
  */
