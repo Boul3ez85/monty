@@ -15,6 +15,7 @@ void get_instructions(char **tokens, stack_t **stack, unsigned int line_number)
 	instruction_t op_codes[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", pint},
 		{NULL, NULL}
 	};
 	if (tokens[1])

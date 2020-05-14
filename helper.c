@@ -21,3 +21,22 @@ void free_stack(stack_t *stack)
 	}
 	stack = NULL;
 }
+
+/**
+ * stack_len - counts lenght of doubly linked list
+ * @stack: head node
+ *
+ * Return: lenght size_t
+ */
+
+size_t stack_len(const stack_t *stack)
+{
+	size_t len = 0;
+
+	while (stack)
+	{
+		stack = stack->next;
+		len++;
+	}
+	return (len);
+}

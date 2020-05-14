@@ -43,8 +43,11 @@ typedef struct instruction_s
 void get_instructions(char **tokens, stack_t **, unsigned int);
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
-void free_stack(stack_t *stack);
 char **tokenizer(char *str);
+void pint(stack_t **stack, unsigned int line_number);
 
+/* stack helpers functions */
+void free_stack(stack_t *stack);
+size_t stack_len(const stack_t *stack);
 
 #endif
