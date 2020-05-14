@@ -1,10 +1,10 @@
 #include "monty.h"
 
 /**
- *free list - free a DLL
- *@stack: stack node
+ * free_stack - free a DLL
+ * @stack: stack node
  *
- *Return: Void
+ * Return: Void
  */
 
 void free_stack(stack_t *stack)

@@ -1,18 +1,18 @@
 #include "monty.h"
 
 /**
- * 
- * 
- * 
- * 
- * 
+ * get_instructions - function to call the function to the instruction
+ * @tokens: array of tokens
+ * @stack: head of the stack
+ * @line_number: line number
+ *
+ * Return: Void
  */
 
 void get_instructions(char **tokens, stack_t **stack, unsigned int line_number)
 {
 	int i = 0;
-	instruction_t op_codes[] =
-	{
+	instruction_t op_codes[] = {
 		{"push", push},
 		{"pall", pall},
 		{NULL, NULL}

@@ -1,11 +1,11 @@
 #include "monty.h"
 
 /**
- * 
- * 
- * 
- * 
- * 
+ * push - push an item into the stack
+ * @stack: head of the stack
+ * @line_number: line nmbr
+ *
+ * Return: Void
  */
 
 void push(stack_t **stack, unsigned int line_number)
@@ -28,11 +28,11 @@ void push(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * 
- * 
- * 
- * 
- * 
+ * pall - function to print all
+ * @stack: head of the stack
+ * @line_number: line nmbr
+ *
+ * Return: Void
  */
 
 void pall(stack_t **stack, unsigned int line_number)

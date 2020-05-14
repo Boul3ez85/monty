@@ -1,12 +1,13 @@
 #include "monty.h"
 
 /**
- * 
- * 
- * 
- * 
- * 
+ * main - main function
+ * @argc: count of arguments
+ * @argv: vector to arguments
+ *
+ * Return: 0 on success, error on failure
  */
+
 int stack_value;
 int main(int argc, char **argv)
 {
