@@ -74,13 +74,11 @@ void pstr(stack_t **stack, unsigned int line_number)
 	stack_t *temp;
 	char c;
 
-	if (*stack == NULL)
-		exit(EXIT_FAILURE);
 	(void)line_number;
 	temp = *stack;
 	while (stack_len(*stack) != 0)
 	{
-		if (isalpha(temp->n) == 0)
+		if (isalpha(temp->n) == 0 || temp == NULL)
 			break;
 		c = temp->n;
 		printf("%c", c);
