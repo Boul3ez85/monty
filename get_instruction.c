@@ -19,8 +19,11 @@ void get_instructions(char **tokens, stack_t **stack, unsigned int line_number)
 		{"pint", pint},
 		{"pop", pop},
 		{"swap", swap},
+		{"add", add},
+		{"nop", nop},
 		{NULL, NULL}
 	};
+
 	if (strcmp(tokens[0], "push") == 0)
 	{
 		if (!tokens[1] || isdigit(*check) == 0)
