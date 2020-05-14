@@ -64,7 +64,7 @@ void sub(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * div - does nothing
+ * _div - does nothing
  * @stack: head node
  * @line_number: line nmbr
  *
