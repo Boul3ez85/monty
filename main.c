@@ -33,7 +33,9 @@ int main(int argc, char **argv)
 		tokens = tokenizer(buffer);
 		get_instructions(tokens, &stack, line_number);
 		line_number++;
+		free(tokens);
 	}
+	free(buffer);
 	free_stack(stack);
 	fclose(fd);
 	return (0);
