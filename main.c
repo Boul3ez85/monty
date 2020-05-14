@@ -32,7 +32,7 @@ int main(int argc, char **argv)
 	while (getline(&buffer, &size, fd) != -1)
 	{
 		tokens = tokenizer(buffer);
-		get_instructions(tokens, &stack, line_number);
+		get_instructions(tokens, &stack, buffer, line_number);
 		line_number++;
 		free(tokens);
 	}
