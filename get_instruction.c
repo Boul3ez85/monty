@@ -27,6 +27,7 @@ stack_t **stack, unsigned int line_number, FILE *fd)
 		{"sub", sub},
 		{"div", _div},
 		{"mul", mul},
+		{"mod", mod},
 		{NULL, NULL}
 	};
 
