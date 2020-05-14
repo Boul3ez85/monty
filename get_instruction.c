@@ -30,6 +30,8 @@ stack_t **stack, unsigned int line_number, FILE *fd)
 		{"mod", mod},
 		{"pchar", pchar},
 		{"pstr", pstr},
+		{"stack", _stack},
+		{"queue", _queue},
 		{NULL, NULL}
 	};
 

@@ -86,3 +86,31 @@ void pstr(stack_t **stack, unsigned int line_number)
 	}
 	printf("\n");
 }
+
+/**
+ * _stack - sets the format of the data to a stack
+ * @stack: head node
+ * @line_number: line nmbr
+ *
+ * Return: Void
+ */
+void _stack(stack_t **stack, unsigned int line_number)
+{
+	(void)line_number;
+	(void)stack;
+	stack_value = 0;
+}
+
+/**
+ * _queue - sets the format of the data to a queue
+ * @stack: head node
+ * @line_number: line nmbr
+ *
+ * Return: Void
+ */
+void _queue(stack_t **stack, unsigned int line_number)
+{
+	(void)line_number;
+	(void)stack;
+	stack_value = 1;
+}
