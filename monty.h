@@ -45,9 +45,11 @@ void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
 char **tokenizer(char *str);
 void pint(stack_t **stack, unsigned int line_number);
+void pop(stack_t **stack, unsigned int line_number);
 
 /* stack helpers functions */
 void free_stack(stack_t *stack);
 size_t stack_len(const stack_t *stack);
+int delete_dnodeint_at_index(stack_t **stack, unsigned int index);
 
 #endif

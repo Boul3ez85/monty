@@ -48,6 +48,14 @@ void pall(stack_t **stack, unsigned int line_number)
 	}
 }
 
+/**
+ * pint - print top stack
+ * @stack: head node
+ * @line_number: line nmbr
+ *
+ * Return: Void
+ */
+
 void pint(stack_t **stack, unsigned int line_number)
 {
 	if (stack_len(*stack) <= 0 || *stack == NULL)
@@ -56,4 +64,22 @@ void pint(stack_t **stack, unsigned int line_number)
 		exit(EXIT_FAILURE);
 	}
 	printf("%d\n", (*stack)->n);
+}
+
+/**
+ * pop - delete head node
+ * @stack: head node
+ * @line_number: line nmbr
+ *
+ * Return: Void
+ */
+
+void pop(stack_t **stack, unsigned int line_number)
+{
+	if (stack_len(*stack) <= 0 || *stack == NULL)
+	{
+		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	delete_dnodeint_at_index(stack, 0);
 }
